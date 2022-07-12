@@ -1,35 +1,18 @@
 [
   {
-    "fieldId": "longformBody",
+    "fieldId": "body",
     "conditions": [
       {
-        "eq": ["postVariant", "LONGFORM"]
+        "eq": ["pageType", "Advice Collection"]
       }
     ]
   },
   {
-    "fieldId": "mediaEmbedCode",
+    "fieldId": "indexStyle",
     "conditions": [
       {
-        "eq": ["postVariant", "MEDIA"]
-      }
-    ]
-  },
-  {
-    "fieldId": "sponsorName",
-    "conditions": [
-      {
-        "eq": ["postVariant", "SPONSORED"]
-      }
-    ]
-  },
-  {
-    "fieldId": "sponsorKeywords",
-    "conditions": [
-      {
-        "eq": ["postVariant", "SPONSORED"]
+        "eq": ["pageType", "Index"]
       }
     ]
   }
 ]
-

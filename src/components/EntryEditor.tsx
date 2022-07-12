@@ -236,7 +236,7 @@ const Entry = (props: EditorProps) => {
 
         // If a field is meant to condiiton another field, render a stateful component.
         // In this app, the postVariant field will condition the display of other fields, so we'll have to manage its state ourselves
-        if (field.id === "postVariant") {
+        if (field.id === "pageType") {
           const dropdownOpts =
             field.validations?.find((validation) =>
               validation.hasOwnProperty("in")
