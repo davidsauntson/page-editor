@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PlainClientAPI } from "contentful-management";
-import { EditorExtensionSDK } from "@contentful/app-sdk";
+import { EditorExtensionSDK, FieldExtensionSDK } from "@contentful/app-sdk";
 // Forma 36 Components
 import { Field, FieldWrapper } from "@contentful/default-field-editors";
 import { FormControl, Select } from "@contentful/f36-components";
@@ -81,6 +81,9 @@ const isFieldManaged = (fieldId: string, data: IConditonalField[]): boolean => {
 // Render default contentful fields using Forma 36 Component
 const DefaultField = (props: DefaultFieldProps) => {
   const { fieldId, sdk, widgetId } = props;
+
+  console.log(fieldId, widgetId);
+
   return (
     <FieldWrapper sdk={sdk} name={fieldId} showFocusBar={true}>
       <Field sdk={sdk} widgetId={widgetId!} />
@@ -174,7 +177,7 @@ const Entry = (props: EditorProps) => {
     // Save data to contentful after 3 seconds
     setTimeout(() => {
       saveInput(fieldId, input);
-    }, 3000);
+    }, 500);
   };
 
   // Watch if the values of any managed fields change
